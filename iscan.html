@@ -42,14 +42,14 @@
 <body>
     
     
-    <div id="reader"></div>
+    <div style="width: 500px" id="reader"></div>
     <h3 id="qr-reader-results"></h3>
     <script>
         
         let html5QrCode = new Html5Qrcode("reader"); 
         let reader = document.getElementById("reader");
         let res = document.getElementById('qr-reader-results');
-        let config = { fps: 10, qrbox:  400  }; //扫一扫相关设置
+        let config = { fps: 10, qrbox:  {width:250,height:150}  }; //扫一扫相关设置
        //相机授权
         function useCamera() {
             reader.style.display = "block";
